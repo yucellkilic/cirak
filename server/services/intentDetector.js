@@ -13,7 +13,7 @@ const INTENTS_DIR = path.join(__dirname, '../data/intents');
 let cachedIntents = null;
 let lastLoadTime = 0;
 
-function loadIntents(force = false) {
+export function loadIntents(force = false) {
     // Refresh cache every 10 seconds or if forced (e.g. admin update)
     if (!force && cachedIntents && (Date.now() - lastLoadTime < 10000)) {
         return cachedIntents;

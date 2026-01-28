@@ -1,6 +1,7 @@
 import express from 'express';
 import { matchIntent } from '../services/intentEngine.js';
-import { generateWithLLM } from '../services/llmService.js';
+import { buildPrompt } from '../services/promptBuilder.js';
+import { generateResponse } from '../services/llmService.js';
 import { validateResponse } from '../services/responseValidator.js';
 import businessConfig from '../data/businessConfig.json' with { type: 'json' };
 
@@ -49,7 +50,8 @@ router.post('/chat', async (req, res) => {
         console.log(`[Chat] Algılanan Konu: ${detectedTopic}`);
 
         // 2. LLM Üretimi
-        const rawResponse = await generateWithLLM(message, contextData);
+        const prompt = buildPrompt(detectedTopic, contextData, message);
+        const rawResponse = await generateResponse(prompt);
 
         // 3. Validasyon & Güvenlik
         const validation = validateResponse(rawResponse, contextData);
