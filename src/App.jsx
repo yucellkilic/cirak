@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* ... */}
+        <Route path="/" element={<Navigate to="/admin" replace />} />
 
         {/* Admin Panel */}
         <Route path="/admin" element={<AdminLayout />}>
