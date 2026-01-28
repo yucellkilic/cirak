@@ -10,28 +10,21 @@ import TestConsole from './components/admin/TestConsole';
 import QualityControl from './components/admin/QualityControl';
 import Analytics from './components/admin/Analytics';
 import SnapshotDiff from './components/admin/SnapshotDiff';
+import PricingManager from './components/admin/PricingManager';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Demo View */}
-        <Route path="/" element={
-          <div className="demo-stage">
-            <div className="demo-content">
-              <h1>ÇIRAK Demo Stage</h1>
-              <p>Integration & Admin Panel Testing</p>
-            </div>
-            <WidgetContainer />
-          </div>
-        } />
+        {/* ... */}
 
         {/* Admin Panel */}
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="intents" element={<IntentManager />} />
+          <Route path="pricing" element={<PricingManager />} />
           <Route path="fallbacks" element={<FallbackManager />} />
           <Route path="snapshot" element={<SnapshotControl />} />
           <Route path="console" element={<TestConsole />} />

@@ -1,0 +1,26 @@
+{
+    "currency": "TL",
+    "packages": [
+        {
+            "id": "starter",
+            "name": "Başlangıç Paketi",
+            "price": 5000,
+            "features": [
+                "Tek Sayfa",
+                "Temel SEO",
+                "Mobil Uyumlu"
+            ]
+        },
+        {
+            "id": "pro",
+            "name": "Pro Paket",
+            "price": 12000,
+            "features": [
+                "Çok Sayfa",
+                "Gelişmiş SEO",
+                "Blog Modülü",
+                "Yönetim Paneli"
+            ]
+        }
+    ]
+}

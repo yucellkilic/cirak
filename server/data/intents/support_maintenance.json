@@ -54,6 +54,14 @@
     {
       "display": "yardim",
       "normalized": "yardim"
+    },
+    {
+      "display": "yardımcı lazım",
+      "normalized": "yardimci lazim"
+    },
+    {
+      "display": "yardım lazım",
+      "normalized": "yardim lazim"
     }
   ],
   "data": {

@@ -68,11 +68,13 @@ app.get('/api/public/config', (req, res) => {
 });
 
 import adminIntentRoutes from './routes/adminIntents.js';
+import adminPricingRoutes from './routes/adminPricing.js';
 
 // ... (imports)
 
 // Mount new admin intent routes (Replacing legacy inline ones)
 app.use('/api/admin', adminIntentRoutes);
+app.use('/api/admin', adminPricingRoutes);
 
 // Legacy Intent Routes Removed (Delegated to adminIntents.js)
 

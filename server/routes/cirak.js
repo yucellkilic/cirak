@@ -54,6 +54,16 @@ router.post('/message', async (req, res) => {
         const intentName = matchedIntent.intent;
         console.log(`[Flow] Matched intent: ${intentName}`);
 
+        // SPECIAL CASE: Pricing Details (Deterministic Bypass)
+        if (intentName === 'pricing_details') {
+            const { formatPricingResponse } = await import('../services/pricingService.js');
+            return res.json({
+                response: formatPricingResponse(),
+                source: "deterministic_pricing_engine",
+                intent: intentName
+            });
+        }
+
         // 4. Data Usage (Use data directly from the matched intent object if available)
         // The intent files now serve as both detection rules AND data source.
         let intentData = matchedIntent.data || {};
