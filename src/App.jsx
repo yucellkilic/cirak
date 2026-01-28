@@ -17,7 +17,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/admin" replace />} />
+        <Route path="/" element={
+          <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <h1>ÇIRAK Admin Paneli</h1>
+            <a href="/admin" style={{ marginTop: '1rem', color: '#2563eb' }}>Panele Giriş</a>
+          </div>
+        } />
 
         {/* Admin Panel */}
         <Route path="/admin" element={<AdminLayout />}>
