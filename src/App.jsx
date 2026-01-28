@@ -26,8 +26,7 @@ function App() {
 
         {/* Admin Panel */}
         <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<Navigate to="dashboard" replace />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route index element={<Dashboard />} />
           <Route path="intents" element={<IntentManager />} />
           <Route path="pricing" element={<PricingManager />} />
           <Route path="fallbacks" element={<FallbackManager />} />

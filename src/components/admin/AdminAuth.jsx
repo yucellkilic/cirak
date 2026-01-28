@@ -32,13 +32,15 @@ const AdminAuth = ({ children }) => {
     if (isAuthenticated) {
         return (
             <div className="auth-wrapper">
-                {/* Clone element to inject logout prop if needed, or just render children */}
-                {React.Children.map(children, child => {
-                    if (React.isValidElement(child)) {
-                        return React.cloneElement(child, { handleLogout });
-                    }
-                    return child;
-                })}
+                {typeof children === 'function'
+                    ? children({ handleLogout })
+                    : React.Children.map(children, child => {
+                        if (React.isValidElement(child)) {
+                            return React.cloneElement(child, { handleLogout });
+                        }
+                        return child;
+                    })
+                }
             </div>
         );
     }
