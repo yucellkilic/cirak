@@ -1,0 +1,57 @@
+{
+    "company": {
+        "name": "ÇIRAK WEB",
+        "support_email": "destek@cirakweb.com",
+        "phone": "0555 555 55 55"
+    },
+    "packages": [
+        {
+            "id": "starter",
+            "name": "Başlangıç Paketi",
+            "price": 5000,
+            "currency": "TL",
+            "features": [
+                "Tek Sayfa",
+                "Temel SEO",
+                "Mobil Uyumlu",
+                "WhatsApp Entegrasyonu"
+            ]
+        },
+        {
+            "id": "pro",
+            "name": "Pro Paket",
+            "price": 12000,
+            "currency": "TL",
+            "features": [
+                "5 Sayfa",
+                "Yönetim Paneli",
+                "Blog Modülü",
+                "Gelişmiş SEO",
+                "Google Haritalar Kaydı"
+            ]
+        },
+        {
+            "id": "ecomm",
+            "name": "E-Ticaret Paketi",
+            "price": 25000,
+            "currency": "TL",
+            "features": [
+                "Sınırsız Ürün",
+                "Ödeme Altyapısı",
+                "Stok Takibi",
+                "Kargo Entegrasyonu",
+                "Pazaryeri Entegrasyonu"
+            ]
+        }
+    ],
+    "policies": {
+        "refund_policy": "İade süreci fatura kesiminden sonraki 14 gün içindedir. Özel yazılım projelerinde onaylanan tasarım sonrası iade yapılmaz.",
+        "support_hours": "Hafta içi 09:00 - 18:00 arası teknik destek verilmektedir.",
+        "payment_terms": "Ödemenin %50'si iş başlangıcında, kalanı proje tesliminde alınır."
+    },
+    "fallbacks": [
+        "Bu konuda bilgim yok, ancak size en uygun paketi seçmenize yardımcı olabilirim.",
+        "Bunu müşteri temsilcimize sormanız daha iyi olur. Sizi aramamızı ister misiniz?",
+        "Şu an sadece web paketlerimiz ve fiyatlarımız hakkında bilgi verebiliyorum."
+    ]
+}

@@ -1,0 +1,91 @@
+{
+  "intent": "process_flow",
+  "label": "Süreç Nasıl İşliyor?",
+  "description": "Proje ve çalışma süreci",
+  "keys": [
+    {
+      "display": "süreç",
+      "normalized": "surec"
+    },
+    {
+      "display": "surec",
+      "normalized": "surec"
+    },
+    {
+      "display": "nasıl işliyor",
+      "normalized": "nasil isliyor"
+    },
+    {
+      "display": "nasil isliyor",
+      "normalized": "nasil isliyor"
+    },
+    {
+      "display": "nasıl ilerliyor",
+      "normalized": "nasil ilerliyor"
+    },
+    {
+      "display": "nasil ilerliyor",
+      "normalized": "nasil ilerliyor"
+    },
+    {
+      "display": "işleyiş",
+      "normalized": "isleyis"
+    },
+    {
+      "display": "isleyis",
+      "normalized": "isleyis"
+    },
+    {
+      "display": "çalışma süreci",
+      "normalized": "calisma sureci"
+    },
+    {
+      "display": "calisma sureci",
+      "normalized": "calisma sureci"
+    },
+    {
+      "display": "proje süreci",
+      "normalized": "proje sureci"
+    },
+    {
+      "display": "proje sureci",
+      "normalized": "proje sureci"
+    },
+    {
+      "display": "iş akışı",
+      "normalized": "is akisi"
+    },
+    {
+      "display": "is akisi",
+      "normalized": "is akisi"
+    },
+    {
+      "display": "adımlar",
+      "normalized": "adimlar"
+    },
+    {
+      "display": "adimlar",
+      "normalized": "adimlar"
+    },
+    {
+      "display": "aşamalar",
+      "normalized": "asamalar"
+    },
+    {
+      "display": "asamalar",
+      "normalized": "asamalar"
+    }
+  ],
+  "data": {
+    "steps": [
+      "1. İhtiyaç Analizi ve Teklif",
+      "2. Tasarım Onayı",
+      "3. Kodlama ve Geliştirme",
+      "4. İçerik Girişi",
+      "5. Test ve Yayın"
+    ],
+    "info": "Tüm süreçte sizinle iletişim halinde kalıyoruz. Onay almadan bir sonraki aşamaya geçmiyoruz."
+  },
+  "enabled": true,
+  "priority": 1
+}

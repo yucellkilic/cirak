@@ -1,0 +1,70 @@
+{
+  "intent": "support_maintenance",
+  "label": "Teknik Destek ve Bakım",
+  "description": "Destek, bakım ve yayın sonrası hizmetler",
+  "keys": [
+    {
+      "display": "destek",
+      "normalized": "destek"
+    },
+    {
+      "display": "teknik destek",
+      "normalized": "teknik destek"
+    },
+    {
+      "display": "bakım",
+      "normalized": "bakim"
+    },
+    {
+      "display": "bakim",
+      "normalized": "bakim"
+    },
+    {
+      "display": "bakım hizmeti",
+      "normalized": "bakim hizmeti"
+    },
+    {
+      "display": "bakim hizmeti",
+      "normalized": "bakim hizmeti"
+    },
+    {
+      "display": "destek hizmeti",
+      "normalized": "destek hizmeti"
+    },
+    {
+      "display": "yayın sonrası",
+      "normalized": "yayin sonrasi"
+    },
+    {
+      "display": "yayin sonrasi",
+      "normalized": "yayin sonrasi"
+    },
+    {
+      "display": "sonrası destek",
+      "normalized": "sonrasi destek"
+    },
+    {
+      "display": "sonrasi destek",
+      "normalized": "sonrasi destek"
+    },
+    {
+      "display": "yardım",
+      "normalized": "yardim"
+    },
+    {
+      "display": "yardim",
+      "normalized": "yardim"
+    }
+  ],
+  "data": {
+    "support_terms": "Proje tesliminden sonra 1 yıl boyunca teknik destek ücretsizdir.",
+    "coverage": [
+      "Yazılımsal Hatalar",
+      "Sunucu Problemleri",
+      "Yedekleme"
+    ],
+    "hours": "Hafta içi 09:00 - 18:00"
+  },
+  "enabled": true,
+  "priority": 1
+}

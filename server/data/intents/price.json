@@ -1,0 +1,38 @@
+{
+  "packages": [
+    {
+      "name": "Başlangıç Paketi",
+      "price": "5000 TL",
+      "features": [
+        "Tek Sayfa",
+        "Temel SEO",
+        "Mobil Uyumlu"
+      ]
+    },
+    {
+      "name": "Pro Paket",
+      "price": "12000 TL",
+      "features": [
+        "5 Sayfa",
+        "Yönetim Paneli",
+        "Blog",
+        "Gelişmiş SEO"
+      ]
+    },
+    {
+      "name": "E-Ticaret Paketi",
+      "price": "25000 TL",
+      "features": [
+        "Sınırsız Ürün",
+        "Ödeme Altyapısı",
+        "Stok Takibi"
+      ]
+    }
+  ],
+  "policies": {
+    "payment": "Ödemenin %50'si peşin, kalanı teslimatta.",
+    "support": "Hafta içi 09:00 - 18:00."
+  },
+  "enabled": true,
+  "priority": 1
+}

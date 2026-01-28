@@ -1,0 +1,85 @@
+import db from './database.js';
+
+const mockIntents = [
+    {
+        intent_id: "pricing_corporate",
+        title: "Kurumsal Site Fiyatı",
+        primary_response: "Kurumsal web sitesi projeleri genellikle 5.900 TL – 25.000 TL aralığında planlanır.\nFiyat, ihtiyaçlara ve proje kapsamına göre netleşir.",
+        secondary_response: "Fiyatı belirleyen ana etkenler; sayfa sayısı, özel fonksiyonlar ve içerik yönetim sistemi ihtiyaçlarıdır.",
+        cta_response: "Detaylı bütçe teklifi için bizimle iletişime geçebilirsiniz.",
+        tone: "kurumsal",
+        keywords: ["fiyat", "fiyatlar", "ücret", "ücreti", "kaç tl", "ne kadar", "kaça yapılır", "site kaça", "site fiyatı", "web sitesi fiyatı", "kurumsal site fiyatı", "site maliyeti", "maliyet", "bütçe", "fiyat bilgisi", "ortalama fiyat", "en ucuz", "paket fiyat", "site yaptırmak ne kadar"]
+    },
+    {
+        intent_id: "delivery_time",
+        title: "Teslim Süresi",
+        primary_response: "Kurumsal web siteleri genellikle 7–14 gün içinde tamamlanır.\nSüre, proje kapsamına göre değişiklik gösterebilir.",
+        secondary_response: "İçeriklerin tarafımıza hızlı iletilmesi süreci hızlandıran en önemli faktördür.",
+        tone: "nötr",
+        keywords: ["teslim", "teslim süresi", "kaç günde", "kaç gün", "ne kadar sürer", "ne zaman biter", "hazır olur", "bitme süresi", "süre", "kaç haftada"]
+    },
+    {
+        intent_id: "included_services",
+        title: "Neler Dahil?",
+        primary_response: "Kurumsal web sitesinde; modern tasarım, mobil uyumlu yapı, temel SEO ayarları ve iletişim bölümleri yer alır.",
+        secondary_response: "Tüm sistemlerimiz yönetim panelli olup, içeriklerinizi kendiniz güncelleyebilirsiniz.",
+        tone: "kurumsal",
+        keywords: ["neler dahil", "fiyata ne dahil", "içinde ne var", "paket içeriği", "site içeriği", "sitede neler var", "sitede ne oluyor", "site özellikleri", "hangi özellikler var", "neler yapıyorsunuz", "neler sunuyorsunuz", "site fonksiyonları"]
+    },
+    {
+        intent_id: "process_flow",
+        title: "Süreç Nasıl İşliyor?",
+        primary_response: "Süreç; ihtiyaç analizi, tasarım, geliştirme, test ve yayına alma adımlarından oluşur.",
+        secondary_response: "Her aşamada sizden onay alarak ilerliyor ve şeffaf bir çalışma süreci sunuyoruz.",
+        tone: "güven",
+        keywords: ["süreç", "nasıl ilerliyor", "nasıl oluyor", "aşamalar", "baştan sona", "çalışma şekli", "işleyiş", "nasıl yapıyorsunuz", "tasarım süreci"]
+    },
+    {
+        intent_id: "contact_info",
+        title: "İletişim / Ulaşım",
+        primary_response: "Bize info@yucelkilic.tr e-posta adresinden veya +90 505 519 63 00 numaralı telefon / WhatsApp hattımızdan ulaşabilirsiniz.",
+        secondary_response: "Sorularınız için günün her saati bize mesaj bırakabilirsiniz.",
+        cta_response: "WhatsApp ile Hemen Bağlan",
+        tone: "satış",
+        keywords: ["iletişim", "ulaşmak", "size nasıl ulaşırım", "numara", "telefon", "whatsapp", "mail", "e-posta", "instagram", "dm", "adres"]
+    },
+    {
+        intent_id: "general_web_info",
+        title: "Web Sitesi Nedir?",
+        primary_response: "Kurumsal web siteleri, işletmenin dijitalde güvenilir görünmesini sağlar ve müşterilere net bilgi sunar.",
+        secondary_response: "Profesyonel bir site, markanızın 7/24 açık olan dijital ofisidir.",
+        tone: "nötr",
+        keywords: ["web sitesi nedir", "kurumsal site ne işe yarar", "neden site gerekli", "site lazım mı", "site önemli mi", "yaptırmak mantıklı mı", "site şart mı"]
+    },
+    {
+        intent_id: "site_continuity",
+        title: "Site Kapanır mı?",
+        primary_response: "Web sitesi kurulduktan sonra, hosting ve domain ücretleri yıllık olarak ödendiği sürece siteniz yayında kalır.",
+        secondary_response: "Hosting ve domain, sitenin internette erişilebilir olmasını sağlayan temel hizmetlerdir. Süresi dolmadan yenilendiğinde site kesintisiz şekilde çalışmaya devam eder.",
+        tone: "güven",
+        keywords: ["site kapanır mı", "sonradan kapanır mı", "site silinir mi", "site sürekli açık mı", "site yayından düşer mi", "kapanma olur mu", "hosting bitince ne olur", "domain bitince ne olur", "site durur mu", "siteyi yaptıktan sonra kapanır mı", "site açık kalır mı", "site iptal olur mu", "site ömrü var mı", "site kalıcı mı", "her sene ödeme var mı", "kapanır", "silinir", "biter", "düşer", "hosting", "domain"]
+    }
+];
+
+const insertIntent = db.prepare(`
+  INSERT INTO intents (intent_id, title, primary_response, secondary_response, cta_response, tone)
+  VALUES (?, ?, ?, ?, ?, ?)
+`);
+
+const insertKeyword = db.prepare('INSERT INTO keywords (intent_id, keyword_text) VALUES (?, ?)');
+
+const transaction = db.transaction((intents) => {
+    for (const intent of intents) {
+        insertIntent.run(intent.intent_id, intent.title, intent.primary_response, intent.secondary_response, intent.cta_response, intent.tone);
+        for (const kw of intent.keywords) {
+            insertKeyword.run(intent.intent_id, kw);
+        }
+    }
+});
+
+try {
+    transaction(mockIntents);
+    console.log('✅ Mock data migrated successfully!');
+} catch (error) {
+    console.log('⚠️ Migration skipped or failed:', error.message);
+}

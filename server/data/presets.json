@@ -1,0 +1,13 @@
+{
+    "intro": {
+        "message": "Aşağıdaki konularda size yetkilendirilmiş bilgiler sunabilirim:",
+        "options": [
+            "Kurumsal web sitesi paketleri",
+            "Fiyatlandırma ve paket detayları",
+            "Süreç nasıl işliyor?",
+            "Teslim süresi",
+            "Teknik destek ve bakım",
+            "Teklif almak istiyorum"
+        ]
+    }
+}

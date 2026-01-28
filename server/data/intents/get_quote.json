@@ -1,0 +1,64 @@
+{
+  "intent": "get_quote",
+  "label": "Teklif Almak",
+  "description": "Teklif, iletişim ve satış talepleri",
+  "keys": [
+    {
+      "display": "teklif",
+      "normalized": "teklif"
+    },
+    {
+      "display": "teklif almak",
+      "normalized": "teklif almak"
+    },
+    {
+      "display": "fiyat teklifi",
+      "normalized": "fiyat teklifi"
+    },
+    {
+      "display": "teklif istiyorum",
+      "normalized": "teklif istiyorum"
+    },
+    {
+      "display": "iletişime geç",
+      "normalized": "iletisime gec"
+    },
+    {
+      "display": "iletisime gec",
+      "normalized": "iletisime gec"
+    },
+    {
+      "display": "bana ulaşın",
+      "normalized": "bana ulasin"
+    },
+    {
+      "display": "bana ulasin",
+      "normalized": "bana ulasin"
+    },
+    {
+      "display": "satın almak",
+      "normalized": "satin almak"
+    },
+    {
+      "display": "satin almak",
+      "normalized": "satin almak"
+    },
+    {
+      "display": "görüşebilir miyiz",
+      "normalized": "gorusebilir miyiz"
+    },
+    {
+      "display": "gorusabilir miyiz",
+      "normalized": "gorusabilir miyiz"
+    }
+  ],
+  "data": {
+    "contact": {
+      "phone": "0555 555 55 55",
+      "email": "teklif@cirakweb.com",
+      "action": "Lütfen telefon numaranızı bırakın, sizi arayalım."
+    }
+  },
+  "enabled": true,
+  "priority": 1
+}

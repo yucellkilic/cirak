@@ -1,0 +1,109 @@
+{
+  "intent": "corporate_packages",
+  "label": "Kurumsal Web Sitesi Paketleri",
+  "description": "Kurumsal ve firma web sitesi paketleri",
+  "keys": [
+    {
+      "display": "kurumsal",
+      "normalized": "kurumsal"
+    },
+    {
+      "display": "kurumsal site",
+      "normalized": "kurumsal site"
+    },
+    {
+      "display": "kurumsal web sitesi",
+      "normalized": "kurumsal web sitesi"
+    },
+    {
+      "display": "şirket sitesi",
+      "normalized": "sirket sitesi"
+    },
+    {
+      "display": "sirket sitesi",
+      "normalized": "sirket sitesi"
+    },
+    {
+      "display": "firma sitesi",
+      "normalized": "firma sitesi"
+    },
+    {
+      "display": "iş yeri sitesi",
+      "normalized": "is yeri sitesi"
+    },
+    {
+      "display": "is yeri sitesi",
+      "normalized": "is yeri sitesi"
+    },
+    {
+      "display": "işletme sitesi",
+      "normalized": "isletme sitesi"
+    },
+    {
+      "display": "isletme sitesi",
+      "normalized": "isletme sitesi"
+    },
+    {
+      "display": "kurumsal paket",
+      "normalized": "kurumsal paket"
+    },
+    {
+      "display": "kurumsal internet sitesi",
+      "normalized": "kurumsal internet sitesi"
+    },
+    {
+      "display": "kurumsal tanıtım sitesi",
+      "normalized": "kurumsal tanitim sitesi"
+    },
+    {
+      "display": "kurumsal tanitim sitesi",
+      "normalized": "kurumsal tanitim sitesi"
+    },
+    {
+      "display": "şirket web sitesi",
+      "normalized": "sirket web sitesi"
+    },
+    {
+      "display": "sirket web sitesi",
+      "normalized": "sirket web sitesi"
+    }
+  ],
+  "data": {
+    "packages": [
+      {
+        "name": "Başlangıç Paketi",
+        "price": "5000 TL",
+        "features": [
+          "Tek Sayfa",
+          "Temel SEO",
+          "Mobil Uyumlu"
+        ]
+      },
+      {
+        "name": "Pro Paket",
+        "price": "12000 TL",
+        "features": [
+          "5 Sayfa",
+          "Yönetim Paneli",
+          "Blog",
+          "Gelişmiş SEO"
+        ]
+      },
+      {
+        "name": "E-Ticaret Paketi",
+        "price": "25000 TL",
+        "features": [
+          "Sınırsız Ürün",
+          "Ödeme Altyapısı",
+          "Stok Takibi"
+        ]
+      }
+    ],
+    "policies": {
+      "payment": "Ödemenin %50'si peşin, kalanı teslimatta.",
+      "support": "Hafta içi 09:00 - 18:00."
+    }
+  },
+  "enabled": true,
+  "priority": 1
+}

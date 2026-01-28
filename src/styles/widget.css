@@ -1,0 +1,199 @@
+.cirak-widget-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cirak-icon {
+    width: var(--widget-size);
+    height: var(--widget-size);
+    background: var(--cirak-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: transform 0.2s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cirak-icon:hover {
+    transform: scale(1.08);
+}
+
+.cirak-icon-svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+.cirak-panel {
+    position: absolute;
+    bottom: var(--panel-bottom);
+    left: 0;
+    width: var(--panel-width);
+    height: var(--panel-height);
+    background: var(--cirak-bg);
+    border-radius: 16px;
+    box-shadow: var(--cirak-shadow);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--cirak-border);
+}
+
+.cirak-header {
+    padding: 16px;
+    background: var(--cirak-primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cirak-header-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cirak-header-info p {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.cirak-close-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cirak-message-area {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #f8fafc;
+}
+
+/* Message Bubbles - Revamped */
+.message-row {
+    display: flex;
+    width: 100%;
+}
+
+.message-row.assistant {
+    justify-content: flex-start;
+}
+
+.message-row.user {
+    justify-content: flex-end;
+}
+
+.cirak-message-bubble {
+    padding: 10px 14px;
+    border-radius: 14px;
+    max-width: 80%;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    position: relative;
+}
+
+.assistant .cirak-message-bubble {
+    background: var(--cirak-primary);
+    color: white;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user .cirak-message-bubble {
+    background: #e2e8f0;
+    color: var(--cirak-text);
+    border-bottom-right-radius: 2px;
+}
+
+.cirak-intent-menu {
+    padding: 12px;
+    border-top: 1px solid var(--cirak-border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    background: white;
+}
+
+.cirak-intent-btn {
+    padding: 6px 12px;
+    background: white;
+    border: 1px solid #cbd5e1;
+    color: var(--cirak-text-muted);
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.cirak-intent-btn:hover {
+    border-color: var(--cirak-primary);
+    color: var(--cirak-primary);
+    background: var(--cirak-primary-light);
+}
+
+/* New Input Area */
+.cirak-input-container {
+    padding: 12px;
+    border-top: 1px solid var(--cirak-border);
+    display: flex;
+    gap: 8px;
+    background: white;
+}
+
+.cirak-input {
+    flex: 1;
+    border: 1px solid var(--cirak-border);
+    padding: 8px 12px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+}
+
+.cirak-input:focus {
+    border-color: var(--cirak-primary);
+}
+
+.cirak-send-btn {
+    background: var(--cirak-primary);
+    border: none;
+    color: white;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cirak-send-btn:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .cirak-panel {
+        width: calc(100vw - 40px);
+        height: 70vh;
+    }
+}

@@ -1,0 +1,73 @@
+{
+  "intent": "delivery_time",
+  "label": "Teslim Süresi",
+  "description": "Proje teslim ve süre bilgisi",
+  "keys": [
+    {
+      "display": "teslim",
+      "normalized": "teslim"
+    },
+    {
+      "display": "teslim süresi",
+      "normalized": "teslim suresi"
+    },
+    {
+      "display": "teslim suresi",
+      "normalized": "teslim suresi"
+    },
+    {
+      "display": "kaç gün",
+      "normalized": "kac gun"
+    },
+    {
+      "display": "kac gun",
+      "normalized": "kac gun"
+    },
+    {
+      "display": "kaç günde",
+      "normalized": "kac gunde"
+    },
+    {
+      "display": "kac gunde",
+      "normalized": "kac gunde"
+    },
+    {
+      "display": "ne zaman teslim",
+      "normalized": "ne zaman teslim"
+    },
+    {
+      "display": "ne kadar sürer",
+      "normalized": "ne kadar surer"
+    },
+    {
+      "display": "ne kadar surer",
+      "normalized": "ne kadar surer"
+    },
+    {
+      "display": "tamamlanma süresi",
+      "normalized": "tamamlanma suresi"
+    },
+    {
+      "display": "tamamlanma suresi",
+      "normalized": "tamamlanma suresi"
+    },
+    {
+      "display": "bitiş tarihi",
+      "normalized": "bitis tarihi"
+    },
+    {
+      "display": "bitis tarihi",
+      "normalized": "bitis tarihi"
+    }
+  ],
+  "data": {
+    "standard_times": {
+      "landing_page": "3-5 İş Günü",
+      "corporate": "7-10 İş Günü",
+      "ecommerce": "15-20 İş Günü"
+    },
+    "note": "Süreler içeriklerin tam teslim edilmesi durumunda başlar."
+  },
+  "enabled": true,
+  "priority": 1
+}

@@ -1,0 +1,128 @@
+{
+  "intent": "pricing_details",
+  "label": "Fiyatlandırma ve Paket Detayları",
+  "description": "Fiyat, ücret ve paket bilgileri",
+  "keys": [
+    {
+      "display": "fiyat",
+      "normalized": "fiyat"
+    },
+    {
+      "display": "fiyatlar",
+      "normalized": "fiyatlar"
+    },
+    {
+      "display": "ücret",
+      "normalized": "ucret"
+    },
+    {
+      "display": "ucret",
+      "normalized": "ucret"
+    },
+    {
+      "display": "ücretler",
+      "normalized": "ucretler"
+    },
+    {
+      "display": "ucretler",
+      "normalized": "ucretler"
+    },
+    {
+      "display": "ne kadar",
+      "normalized": "ne kadar"
+    },
+    {
+      "display": "kaç para",
+      "normalized": "kac para"
+    },
+    {
+      "display": "kac para",
+      "normalized": "kac para"
+    },
+    {
+      "display": "fiyat bilgisi",
+      "normalized": "fiyat bilgisi"
+    },
+    {
+      "display": "ücret bilgisi",
+      "normalized": "ucret bilgisi"
+    },
+    {
+      "display": "ucret bilgisi",
+      "normalized": "ucret bilgisi"
+    },
+    {
+      "display": "paket fiyatları",
+      "normalized": "paket fiyatlari"
+    },
+    {
+      "display": "paket fiyatlari",
+      "normalized": "paket fiyatlari"
+    },
+    {
+      "display": "fiyatlandırma",
+      "normalized": "fiyatlandirma"
+    },
+    {
+      "display": "fiyatlandirma",
+      "normalized": "fiyatlandirma"
+    },
+    {
+      "display": "ücretlendirme",
+      "normalized": "ucretlendirme"
+    },
+    {
+      "display": "ucretlendirme",
+      "normalized": "ucretlendirme"
+    },
+    {
+      "display": "maliyet",
+      "normalized": "maliyet"
+    },
+    {
+      "display": "bütçe",
+      "normalized": "butce"
+    },
+    {
+      "display": "butce",
+      "normalized": "butce"
+    }
+  ],
+  "data": {
+    "packages": [
+      {
+        "name": "Başlangıç Paketi",
+        "price": "5000 TL",
+        "features": [
+          "Tek Sayfa",
+          "Temel SEO",
+          "Mobil Uyumlu"
+        ]
+      },
+      {
+        "name": "Pro Paket",
+        "price": "12000 TL",
+        "features": [
+          "5 Sayfa",
+          "Yönetim Paneli",
+          "Blog",
+          "Gelişmiş SEO"
+        ]
+      },
+      {
+        "name": "E-Ticaret Paketi",
+        "price": "25000 TL",
+        "features": [
+          "Sınırsız Ürün",
+          "Ödeme Altyapısı",
+          "Stok Takibi"
+        ]
+      }
+    ],
+    "policies": {
+      "payment": "Ödemenin %50'si peşin, kalanı teslimatta."
+    }
+  },
+  "enabled": true,
+  "priority": 1
+}

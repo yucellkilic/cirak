@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÇIRAK Widget Test - API Integration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #1e293b;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .info-box {
+            background: #f1f5f9;
+            border-left: 4px solid #4F46E5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .info-box h3 {
+            color: #4F46E5;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .info-box p {
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .test-queries {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .test-queries h3 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+
+        .test-queries ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .test-queries li {
+            color: #78350f;
+            padding: 8px 0;
+            border-bottom: 1px solid #fde68a;
+        }
+
+        .test-queries li:last-child {
+            border-bottom: none;
+        }
+
+        .test-queries code {
+            background: #fffbeb;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+        }
+
+        .status {
+            background: #dcfce7;
+            border-left: 4px solid #10b981;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .status p {
+            color: #065f46;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🤖 ÇIRAK Widget Test</h1>
+        <p class="subtitle">API-Driven Mode - Phase 3A Integration</p>
+
+        <div class="info-box">
+            <h3>✅ Widget Özellikleri</h3>
+            <p><strong>API Endpoint:</strong> POST /api/cirak/message</p>
+            <p><strong>Client-Side Logic:</strong> Yok (tamamen backend-driven)</p>
+            <p><strong>Tone Support:</strong> Evet (renk değişimi)</p>
+            <p><strong>Typing Indicator:</strong> Evet</p>
+            <p><strong>Error Handling:</strong> Evet</p>
+        </div>
+
+        <div class="test-queries">
+            <h3>🧪 Test Sorguları</h3>
+            <ul>
+                <li><code>fiyat ne kadar</code> → pricing_corporate (score: 20)</li>
+                <li><code>teslim süresi</code> → delivery_time</li>
+                <li><code>iletişim</code> → contact_info</li>
+                <li><code>neler dahil</code> → included_services</li>
+                <li><code>süreç nasıl</code> → process_flow</li>
+                <li><code>site kapanır mı</code> → site_continuity</li>
+                <li><code>xyz random text</code> → fallback (round-robin)</li>
+            </ul>
+        </div>
+
+        <div class="status">
+            <p>✅ Server çalışıyor: http://localhost:5000</p>
+            <p>✅ Widget sol alt köşede yüklendi</p>
+            <p>✅ Deterministik matching aktif</p>
+        </div>
+    </div>
+
+    <!-- ÇIRAK Widget -->
+    <script src="../public/widget.js"></script>
+</body>
+
+</html>

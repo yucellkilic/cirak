@@ -1,0 +1,20 @@
+:root {
+  /* Colors */
+  --cirak-primary: #2563eb;
+  --cirak-primary-light: #eff6ff;
+  --cirak-bg: #ffffff;
+  --cirak-text: #1e293b;
+  --cirak-text-muted: #64748b;
+  --cirak-border: #e2e8f0;
+  --cirak-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Dimensions */
+  --widget-size: 60px;
+  --panel-width: 350px;
+  --panel-height: 500px;
+  --panel-bottom: 90px;
+  --panel-right: 20px;
+
+  /* Fonts */
+  --cirak-font: 'Inter', sans-serif;
+}
